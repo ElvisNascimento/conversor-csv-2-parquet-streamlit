@@ -37,29 +37,30 @@ Clone o repositório do projeto para seu diretório local:
 ```bash
 git clone https://github.com/ElvisNascimento/dashboard-streamlit.git
 cd dashboard-streamlit
-
-2. Construir e Executar com Docker Compose
-Se você tem o Docker Compose instalado, pode construir e executar o container Docker com o seguinte comando:
 ```
+
+
+### 2. Construir e Executar com Docker Compose
+Se você tem o Docker Compose instalado, pode construir e executar o container Docker com o seguinte comando:
 
 ```bash
 docker-compose up --build
 ```
 
-ste comando faz o seguinte:
+Este comando faz o seguinte:
 
 --build: Força a reconstrução da imagem Docker a partir do Dockerfile.
 docker-compose up: Cria e inicia o container definido no docker-compose.yml.
 Se o Docker Compose não estiver disponível, você pode usar os comandos Docker diretamente.
 
-3. Construir a Imagem Docker
+### 3. Construir a Imagem Docker
 Construa a imagem Docker usando o Dockerfile:
 
 ```bash
 docker build -t streamlit-app .
 ```
 
-4. Executar o Container
+### 4. Executar o Container
 Execute o container Docker com a imagem criada:
 
 
@@ -71,7 +72,9 @@ Este comando faz o seguinte:
 
 -d: Executa o container em segundo plano.
 -p 8502:8502: Mapeia a porta 8502 do container para a porta 8502 da máquina host.
-5. Acessar a Aplicação
+
+
+### 5. Acessar a Aplicação
 Abra um navegador web e vá para http://localhost:8502 para acessar a aplicação Streamlit.
 
 O que a Aplicação Faz
