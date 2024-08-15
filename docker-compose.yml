@@ -1,10 +1,12 @@
 version: '3.8'
 
 services:
-  dashboard-streamlit:
-    image: dashboard-streamlit
+  streamlit-app:
     build:
-      context: .
+      context: .  # Diretório onde o Dockerfile está localizado
     ports:
-      - "8502:8501"
-    container_name: dashboard-streamlit-app
+      - "8502:8502"  # Mapeia a porta 8502 do container para a porta 8502 da máquina host
+    volumes:
+      - .:/app  # Monta o diretório atual no container para facilitar o desenvolvimento
+    environment:
+      - PYTHONUNBUFFERED=1  # Garante que a saída do Python seja exibida em tempo real
