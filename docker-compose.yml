@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  dashboard-streamlit:
+    image: dashboard-streamlit
+    build:
+      context: .
+    ports:
+      - "8502:8501"
+    container_name: dashboard-streamlit-app
