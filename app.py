@@ -10,6 +10,9 @@ def main():
 
     arquivo_carregado = st.file_uploader(f"Carregue seu arquivo {opcao.split()[0]}", type=[opcao.split()[0].lower()])
 
+    if opcao == "CSV para Parquet":
+        opcao_2 = st.selectbox("Escolha o delimitador", [";",","])
+
     if arquivo_carregado is not None:
         try:
             if opcao == "Parquet para CSV":
@@ -31,7 +34,7 @@ def main():
 
             elif opcao == "CSV para Parquet":
                 # Ler o arquivo CSV em um DataFrame do pandas
-                df = pd.read_csv(arquivo_carregado)
+                df = pd.read_csv(arquivo_carregado, sep=opcao_2)
 
                 # Exibir uma pré-visualização básica
                 st.write("Pré-visualização do DataFrame")
