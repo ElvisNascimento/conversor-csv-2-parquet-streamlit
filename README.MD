@@ -4,6 +4,8 @@
 
 Esta aplicação é um conversor de arquivos desenvolvido com Streamlit, Python e Docker. Ela permite converter arquivos entre os formatos Parquet e CSV. A aplicação é empacotada em um container Docker e pode ser executada usando Docker Compose.
 
+## Link do app
+[https://conversorcsv2praquet.streamlit.app/]
 ## Requisitos
 
 Para executar a aplicação, você precisará ter o seguinte software instalado em sua máquina:
